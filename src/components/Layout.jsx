@@ -1,9 +1,8 @@
-const Layout = ({ children, width, height, className }) => {
+import clsx from "clsx";
+
+const Layout = ({ children }) => {
   return (
-    <div
-      // style={{ width, height }}
-      className={`w-${width} h-${height} px-3 py-3 rounded shadow-md w-fit backdrop-blur-md dark:text-white/90`}
-    >
+    <div className={clsx(`max-w-screen-lg py-4 px-2 mx-auto h-[100vh]`)}>
       {children}
     </div>
   );
