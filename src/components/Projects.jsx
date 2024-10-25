@@ -5,7 +5,7 @@ const Projects = () => {
         Projects
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 md:place-items-center gap-4 md:gap-0">
+      <div className="grid grid-cols-1 md:grid-cols-3 md:place-items-center gap-4 md:gap-0 select-none">
         <div className="p-4 border border-slate-900/50 rounded-md shadow shadow-slate-500/5">
           1
         </div>

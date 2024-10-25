@@ -1,10 +1,21 @@
-import { Profile, About, Skills, Projects } from "./components";
+import { Profile, About, Skills, Projects, Preferences } from "./components";
+import { useTheme } from "./useTheme";
+import clsx from "clsx";
 
 const App = () => {
+  const { isDarkTheme } = useTheme({ currentTheme: "dark" });
   return (
     <>
-      <main className="md:grid md:grid-cols-2 dark:bg-[#050505] dark:text-white/95 max-w-screen-lg h-auto md:h-[100vh] mx-auto md:py-4 py-5 px-3 md:px-6">
-        <section className="mb-8 md:mb-0 md:w-fit md:h-full md:px-2 flex flex-col justify-center md:justify-start gap-6 items-center md:items-start">
+      <main
+        className={clsx(
+          `md:grid md:grid-cols-2 max-w-screen-lg h-auto md:h-[100vh] mx-auto md:py-4 py-5 px-3 md:px-6`,
+          {
+            "dark:bg-[#050505] dark:text-white/95": isDarkTheme,
+          }
+        )}
+      >
+        <section className="mb-8 md:mb-0 md:w-fit md:h-full md:px-2 flex flex-col justify-center md:justify-start gap-6 items-center md:items-start relative">
+          <Preferences />
           <Profile />
           <About />
         </section>
