@@ -50,13 +50,13 @@ const Skills = () => {
         skills
       </h2>
 
-      <div className="px-2 md:px-0 grid grid-cols-3 gap-4 p-2 border border-slate-700/90 rounded-lg shadow md:border-none">
+      <div className="px-2 md:px-0 grid grid-cols-3 gap-4 p-2 shadow">
         {skills.map((s) => (
           <div
             key={s.id}
             className="flex justify-center items-center uppercase text-center border border-slate-900/50 rounded-md shadow shadow-slate-500/5 p-3"
           >
-            <p className="flex justify-center text-[12px] md:text-xs items-center w-20 h-20 rounded-full text-center border border-slate-800/90 shadow-md">
+            <p className="flex justify-center text-[12px] md:text-xs items-center w-20 h-20 rounded-full text-center border border-slate-800/90 shadow-md select-none">
               {s.name}
             </p>
           </div>
