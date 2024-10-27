@@ -1,16 +1,22 @@
 import { Profile, About, Skills, Projects, Preferences } from "./components";
+import { useEffect } from "react";
 import { useTheme } from "./useTheme";
 import clsx from "clsx";
 
 const App = () => {
   const { changeTheme, isDarkTheme } = useTheme();
+  useEffect(() => {
+    !isDarkTheme
+      ? (document.body.style.backgroundColor = "#090d0f")
+      : (document.body.style.backgroundColor = "#fffcfc");
+  }, [isDarkTheme]);
   return (
     <>
       <main
         className={clsx(
-          `md:grid md:grid-cols-2 max-w-screen-lg h-auto md:h-[100vh] mx-auto md:py-4 py-5 px-3 md:px-6`,
+          `md:grid md:grid-cols-2 max-w-screen-lg h-auto md:h-[100vh] mx-auto md:py-4 py-5 px-3 md:px-6 bg-transparent`,
           {
-            "dark:bg-black/95 dark:text-white/95": !isDarkTheme,
+            "dark:bg-transparent dark:text-white/95": !isDarkTheme,
           }
         )}
       >

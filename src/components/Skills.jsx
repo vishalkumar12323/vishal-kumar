@@ -56,7 +56,7 @@ const Skills = () => {
             key={s.id}
             className="flex justify-center items-center uppercase text-center border border-slate-900/50 rounded-md shadow shadow-slate-500/5 p-3"
           >
-            <p className="flex justify-center text-[12px] md:text-xs items-center w-20 h-20 rounded-full text-center border border-slate-800/90 shadow-md select-none">
+            <p className="flex justify-center text-[12px] md:text-xs items-center w-[4.5rem] md:w-20 h-[4.5rem] md:h-20 rounded-full text-center border border-slate-800/90 shadow-md select-none">
               {s.name}
             </p>
           </div>
