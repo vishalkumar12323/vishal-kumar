@@ -1,6 +1,6 @@
 const Profile = ({ isDarkTheme }) => {
   return (
-    <div className="w-[300px] h-[300px] p-2 md:p-0 dark:border border-slate-700/90 rounded-lg md:dark:shadow md:dark:shadow-slate-800 md:border-none mt-8">
+    <div className="w-[300px] h-[300px] p-2 md:p-0 mt-8">
       {!isDarkTheme ? (
         <img
           src="/profile-photo-dark.png"
