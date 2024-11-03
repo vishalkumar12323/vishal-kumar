@@ -1,76 +1,32 @@
-import {useRef, useState, useEffect} from "react"
-import {progressBar} from "../lib";
-
-const skills = [
-  {
-    id: 1,
-    name: "html5",
-    value: 90,
-    tValue: 100,
-  },
-  {
-    id: 2,
-    name: "css3",
-    value: 80,
-    tValue: 100,
-  },
-  {
-    id: 3,
-    name: "js",
-    value: 65,
-    tValue: 100,
-  },
-  {
-    id: 4,
-    name: "ts",
-    value: 50,
-    tValue: 100,
-  },
-  {
-    id: 5,
-    name: "react js",
-    value: 60,
-    tValue: 100,
-  },
-  {
-    id: 6,
-    name: "node js",
-    value: 65,
-    tValue: 100,
-  },
-  {
-    id: 7,
-    name: "mongodb",
-    value: 60,
-    tValue: 100,
-  },
-];
+import {
+  BiLogoReact,
+  BiLogoHtml5,
+  BiLogoCss3,
+  BiLogoJavascript,
+  BiLogoNodejs,
+  BiLogoTypescript,
+  BiLogoGithub,
+  BiLogoMongodb,
+  BiLogoDocker,
+} from "react-icons/bi";
 
 const Skills = () => {
-  const [percentage, setPercentage] = useState();
-  const percentageRef = useRef(null);
-  
-
-
-  useEffect(() => {
-    progressBar();
-  }, []);
   return (
     <div className="">
       <h2 className="uppercase underline text-center md:text-start text-3xl md:text-3xl mb-4">
         skills
       </h2>
 
-      <div className="px-2 md:px-0 grid grid-cols-3 gap-4 p-2 shadow place-items-center border border-slate-800/90">
-        {skills.map((s) => (
-          <div
-            key={s.id} dataset={s.value} className=" percentage flex justify-center text-[12px] md:text-xs items-center w-[4.5rem] md:w-20 h-[4.5rem] md:h-20 rounded-full text-center border border-slate-800/90 select-none"
-          >
-            <span className="flex items-center justify-center h-full w-0 bg-red-500">
-              {s.name}
-            </span>
-          </div>
-        ))}
+      <div className="px-2 md:px-0 grid grid-cols-3 gap-5 p-2 shadow place-items-center">
+        <BiLogoReact className="w-14 h-14 bg-blue-600 text-white" />
+        <BiLogoHtml5 className="w-14 h-14 bg-red-600 text-white" />
+        <BiLogoCss3 className="w-14 h-14 bg-blue-500 text-white" />
+        <BiLogoJavascript className="w-14 h-14 bg-yellow-600 text-white" />
+        <BiLogoTypescript className="w-14 h-14 bg-blue-500 text-white" />
+        <BiLogoNodejs className="w-14 h-14 bg-green-700 text-white" />
+        <BiLogoGithub className="w-14 h-14" />
+        <BiLogoMongodb className="w-14 h-14 bg-green-600 text-white" />
+        <BiLogoDocker className="w-14 h-14 bg-blue-500 text-white" />
       </div>
     </div>
   );
