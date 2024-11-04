@@ -44,7 +44,7 @@ const App = () => {
           <section className="pt-4 md:pt-0 mb-8 md:mb-0">
             <Skills />
           </section>
-          <section className="pt-4 md:pt-0">
+          <section className="pt-4">
             <Projects />
           </section>
         </div>
