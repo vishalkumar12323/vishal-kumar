@@ -1,10 +1,4 @@
-import {
-  Profile,
-  About,
-  Skills,
-  Projects,
-  Preferences,
-} from "./components";
+import { Profile, About, Skills, Projects, Preferences } from "./components";
 import { useEffect } from "react";
 import { useTheme } from "./useTheme";
 import clsx from "clsx";
@@ -36,10 +30,10 @@ const App = () => {
           className="md:max-h-[100vh] md:overflow-y-auto
           [&::-webkit-scrollbar-thumb]:rounded 
           [&::-webkit-scrollbar]:w-2
-        [&::-webkit-scrollbar-track]:bg-gray-800
-        [&::-webkit-scrollbar-thumb]:bg-gray-700
+        [&::-webkit-scrollbar-track]:bg-gray-400
+        [&::-webkit-scrollbar-thumb]:bg-gray-200
         dark:[&::-webkit-scrollbar-track]:bg-neutral-900
-        dark:[&::-webkit-scrollbar-thumb]:bg-neutral-800"
+        dark:[&::-webkit-scrollbar-thumb]:bg-neutral-800 scroll-smooth"
         >
           <section className="pt-4 md:pt-0 mb-8 md:mb-0">
             <Skills />

@@ -10,54 +10,88 @@ import {
   BiLogoDocker,
 } from "react-icons/bi";
 
+const skills = [
+  {
+    id: 1,
+    name: "html5",
+    icon: (
+      <BiLogoHtml5 className="w-16 h-16 rounded-full text-white bg-red-600" />
+    ),
+  },
+  {
+    id: 2,
+    name: "css3",
+    icon: (
+      <BiLogoCss3 className="w-16 h-16 rounded-full text-white bg-blue-600" />
+    ),
+  },
+  {
+    id: 3,
+    name: "javascript",
+    icon: (
+      <BiLogoJavascript className="w-16 h-16 rounded-full text-white bg-yellow-500" />
+    ),
+  },
+  {
+    id: 4,
+    name: "typescript",
+    icon: (
+      <BiLogoTypescript className="w-16 h-16 rounded-full text-white bg-blue-500" />
+    ),
+  },
+  {
+    id: 5,
+    name: "reactjs",
+    icon: (
+      <BiLogoReact className="w-16 h-16 rounded-full text-white bg-blue-600" />
+    ),
+  },
+  {
+    id: 6,
+    name: "nodejs",
+    icon: (
+      <BiLogoNodejs className="w-16 h-16 rounded-full text-white bg-green-500" />
+    ),
+  },
+  {
+    id: 7,
+    name: "mongodb",
+    icon: (
+      <BiLogoMongodb className="w-16 h-16 rounded-full text-white bg-green-400" />
+    ),
+  },
+  {
+    id: 8,
+    name: "github",
+    icon: <BiLogoGithub className="w-16 h-16 rounded-full" />,
+  },
+  {
+    id: 9,
+    name: "docker",
+    icon: (
+      <BiLogoDocker className="w-16 h-16 rounded-full text-white bg-blue-700" />
+    ),
+  },
+];
 const Skills = () => {
   return (
     <div className="">
-      <h2 className="uppercase underline text-center md:text-start text-3xl md:text-3xl mb-4">
+      <h2 className="capitalize text-center md:text-start text-3xl md:text-3xl mb-4">
         skills
       </h2>
 
-      <div className="px-2 md:px-0 grid grid-cols-3 gap-5 p-2 shadow-md place-items-center">
-        <div className="flex justify-center items-center flex-col">
-          <BiLogoReact className="w-14 h-14 bg-blue-600 text-white rounded-full" />
-          <span className="text-center uppercase">Reactjs</span>
-        </div>
-        <div className="flex justify-center items-center flex-col">
-          <BiLogoHtml5 className="w-14 h-14 bg-red-600 text-white rounded-full" />
-          <span className="text-center uppercase">HTML5</span>
-        </div>
-
-        <div className="flex justify-center items-center flex-col">
-          <BiLogoCss3 className="w-14 h-14 bg-blue-500 text-white rounded-full" />
-          <span className="text-center uppercase">CSS3</span>
-        </div>
-        <div className="flex justify-center items-center flex-col">
-          <BiLogoJavascript className="w-14 h-14 bg-yellow-600 text-white rounded-full" />
-          <span className="text-center uppercase">javascript</span>
-        </div>
-        <div className="flex justify-center items-center flex-col">
-          <BiLogoTypescript className="w-14 h-14 bg-blue-500 text-white rounded-full" />
-          <span className="text-center uppercase">typescript</span>
-        </div>
-        <div className="flex justify-center items-center flex-col">
-          <BiLogoNodejs className="w-14 h-14 bg-green-700 text-white rounded-full" />
-          <span className="text-center uppercase">nodejs</span>
-        </div>
-
-        <div className="flex justify-center items-center flex-col">
-          <BiLogoGithub className="w-14 h-14 rounded-full" />
-          <span className="text-center uppercase">github</span>
-        </div>
-
-        <div className="flex justify-center items-center flex-col">
-          <BiLogoMongodb className="w-14 h-14 bg-green-600 text-white rounded-full" />
-          <span className="text-center uppercase">mongodb</span>
-        </div>
-
-        <div className="flex justify-center items-center flex-col">
-          <BiLogoDocker className="w-14 h-14 bg-blue-500 text-white rounded-full" />
-          <span className="text-center uppercase">docker</span>
-        </div>
+      <div className=" md:px-0 grid grid-cols-3 gap-5 place-items-center">
+        {skills.map((skill) => {
+          return (
+            <div
+              key={skill.id}
+              className="p-3 w-28 h-28 rounded-md flex justify-center items-center flex-col border border-slate-900/90 shadow-md"
+            >
+              {skill.icon}
+              <span className="text-center uppercase">{skill.name}</span>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
