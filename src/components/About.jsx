@@ -1,14 +1,16 @@
+import { FaArrowRightLong } from "react-icons/fa6";
+
 const About = () => {
   return (
     <>
       <div className="px-5 py-3">
-        <h1 className="uppercase text-4xl md:text-3xl md:text-start font-semibold md:ml-[17px]">
+        <h1 className="uppercase text-[2.50rem] md:text-3xl text-center md:text-start font-semibold">
           vishal kumar
         </h1>
-        <p className="text-xl md:text-sm pl-2 mt-2 text-center md:text-start md:ml-[15px]">
+        <p className="text-xl md:text-[18px] pl-2 mt-2 text-center md:text-start">
           <span>I'm a</span> <span>javascript developer</span>
         </p>
-        <p className="pl-2 text-xl md:text-sm text-center md:text-start md:ml-[15px] text-gray-900 dark:text-white/90">
+        <p className="pl-4 md:pl-2 mt-2 md:mt-1 text-xl md:text-sm text-justify md:text-start text-gray-900 dark:text-gray-300">
           Hi/Hello,
           <br /> My name is Vishal Kumar, I’m a passionate software developer
           with 2 years of experience specializing in Node Js and javascript.
@@ -16,11 +18,10 @@ const About = () => {
           command-line applications.
         </p>
       </div>
-      <div className="w-full flex justify-center md:justify-start items-center  md:items-start">
-        <button className="capitalize px-9 py-2  text-[19px] md:text-xl border border-slate-300 hover:border-slate-500 dark:border-slate-900/90 dark:hover:border-slate-700/95 transition rounded-md shadow-md md:-ml-20">
-          resume
-        </button>
-      </div>
+      <button className="flex justify-between items-center gap-2 capitalize px-7 py-3 md:px-5 md:py-2 text-[19px] md:text-xl border border-slate-400 hover:border-slate-500 dark:border-slate-800/90 dark:hover:border-slate-700/95 rounded-md shadow-md md:ml-[29px] transition-all w-40 md:w-32 md:hover:w-40">
+        resume
+        <FaArrowRightLong className="mt-1" />
+      </button>
     </>
   );
 };

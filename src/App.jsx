@@ -14,7 +14,7 @@ const App = () => {
     <>
       <main
         className={clsx(
-          `md:grid md:grid-cols-2 max-w-screen-lg h-auto md:h-[100vh] mx-auto md:py-4 py-5 px-3 md:px-6 bg-transparent transition-colors duration-500`,
+          `md:grid md:grid-cols-2 max-w-screen-lg h-auto md:h-[100vh] mx-auto md:py-4 py-5 px-3 md:px-6 bg-transparent transition-colors duration-500 border border-slate-400 dark:border-slate-800`,
           {
             "dark:bg-transparent dark:text-white/95": !isDarkTheme,
           }
@@ -28,7 +28,6 @@ const App = () => {
 
         <div
           className="md:max-h-[100vh] md:overflow-y-auto
-          [&::-webkit-scrollbar-thumb]:rounded 
           [&::-webkit-scrollbar]:w-2
         [&::-webkit-scrollbar-track]:bg-gray-400
         [&::-webkit-scrollbar-thumb]:bg-gray-200
