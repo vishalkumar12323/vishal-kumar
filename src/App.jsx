@@ -1,49 +1,26 @@
-import { Profile, About, Skills, Projects, Preferences } from "./components";
-import { useEffect } from "react";
-import { useTheme } from "./useTheme";
-import clsx from "clsx";
+import { useState } from "react";
+import {
+  Contact,
+  Footer,
+  Navbar,
+  Profile,
+  Project,
+  Skills,
+} from "./components";
 
-const App = () => {
-  const { changeTheme, isDarkTheme } = useTheme();
-  useEffect(() => {
-    !isDarkTheme
-      ? (document.body.style.backgroundColor = "#090d0f")
-      : (document.body.style.backgroundColor = "#fffcfc");
-  }, [isDarkTheme]);
+export const App = () => {
+  const [openSideBar, setOpenSideBar] = useState(false);
+
   return (
     <>
-      <main
-        className={clsx(
-          `md:grid md:grid-cols-2 max-w-screen-lg h-auto md:h-[100vh] mx-auto md:py-4 py-5 px-3 md:px-6 bg-transparent transition-colors duration-500 border border-slate-400 dark:border-slate-800`,
-          {
-            "dark:bg-transparent dark:text-white/95": !isDarkTheme,
-          }
-        )}
-      >
-        <section className="mb-8 md:mb-0 md:w-fit md:h-full md:px-2 flex flex-col justify-center md:justify-start gap-6 items-center md:items-start relative">
-          <Preferences isDarkTheme={isDarkTheme} changeTheme={changeTheme} />
-          <Profile isDarkTheme={isDarkTheme} />
-          <About />
-        </section>
-
-        <div
-          className="md:max-h-[100vh] md:overflow-y-auto
-          [&::-webkit-scrollbar]:w-2
-        [&::-webkit-scrollbar-track]:bg-gray-400
-        [&::-webkit-scrollbar-thumb]:bg-gray-200
-        dark:[&::-webkit-scrollbar-track]:bg-neutral-900
-        dark:[&::-webkit-scrollbar-thumb]:bg-neutral-800 scroll-smooth"
-        >
-          <section className="pt-4 md:pt-0 mb-8 md:mb-0">
-            <Skills />
-          </section>
-          <section className="pt-4">
-            <Projects />
-          </section>
-        </div>
+      <main id="main">
+        <Navbar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
+        <Profile setOpenSideBar={setOpenSideBar} />
+        <Skills />
+        <Project />
+        <Contact />
+        <Footer />
       </main>
     </>
   );
 };
-
-export { App };

@@ -1,7 +1,8 @@
 import Profile from "./Profile";
-import About from "./About";
+import Contact from "./Contact";
+import Project from "./Project";
 import Skills from "./Skills";
-import Projects from "./Projects";
-import Preferences from "./Preferences";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
-export { Profile, About, Skills, Projects, Preferences };
+export { Contact, Footer, Profile, Project, Skills, Navbar };

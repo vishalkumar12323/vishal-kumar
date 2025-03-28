@@ -1,0 +1,49 @@
+.header-section {
+  & .nav {
+    & ul {
+      & .link-list {
+        position: relative;
+        width: 40%;
+        transition: var(--transition);
+        border-radius: 3px;
+        background-color: var(--background);
+        border: 1.5px solid transparent;
+
+        &:hover {
+          border: 1.5px solid var(--background);
+          background-color: var(--text-color);
+        }
+
+        & .link {
+          display: flex;
+          width: 120px;
+          height: 53px;
+          gap: 7px;
+          align-items: center;
+          padding: 13px;
+          overflow: hidden;
+
+          & span {
+            color: transparent;
+          }
+
+          & .icons {
+            color: var(--text-color);
+          }
+        }
+        &:hover .icons {
+          color: var(--background);
+        }
+      }
+
+      & .link-list:hover {
+        width: 100%;
+      }
+      & .link-list:hover .link span,
+      .link-list:hover .link ion-icon {
+        transition: var(--transition);
+        color: var(--background) !important;
+      }
+    }
+  }
+}
