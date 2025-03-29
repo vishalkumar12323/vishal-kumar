@@ -13,7 +13,7 @@ export const App = () => {
 
   return (
     <>
-      <main id="main">
+      <main id="" className="h-auto md:pl-40 md:pr-24">
         <Navbar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
         <Profile setOpenSideBar={setOpenSideBar} />
         <Skills />

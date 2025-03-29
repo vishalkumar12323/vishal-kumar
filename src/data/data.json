@@ -25,14 +25,6 @@
   },
   {
     "id": 4,
-    "name": "writer labs",
-    "img": "/daily-sleeps-scr.png",
-    "githubLink": "https://github.com/vishalkumar12323/Vishal-Portfolios-",
-    "previewLink": "https://vishal-portfolio-231.netlify.app",
-    "description": "Writer-Labs a MERN project using core reactjs, redux-toolkit, tailwindcss,and appwrite database"
-  },
-  {
-    "id": 5,
     "name": "Background-Picker",
     "img": "/background-picker.png",
     "githubLink": "https://github.com/vishalkumar12323/Background-Picker",

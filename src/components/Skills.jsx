@@ -1,4 +1,3 @@
-import "../styles/desktop/skills.css";
 import { useEffect, useRef, useState } from "react";
 import {
   IoLogoHtml5,
@@ -12,14 +11,6 @@ import {
   BiLogoMongodb,
   BiLogoPostgresql,
 } from "react-icons/bi";
-
-const ProgressBarLine = ({ value }) => {
-  return (
-    <div className="">
-      <div className=""></div>
-    </div>
-  );
-};
 
 const skills = [
   {
@@ -95,12 +86,12 @@ const Skills = () => {
 
   return (
     <section
-      className="section skill-section h-[85vh]"
+      className="section skill-section w-full h-[90vh] md:h-[85vh] mt-[3.5rem]"
       id="skill"
       ref={elementRef}
     >
       <div className="section-title">
-        <h2>SKILLS</h2>
+        <h2 className="text-slate-900">SKILLS</h2>
       </div>
 
       <div className="skills mt-10">

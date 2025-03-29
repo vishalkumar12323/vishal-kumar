@@ -1,12 +1,25 @@
 .header-section {
+  position: fixed;
+  top: 0;
+  left: 5px;
+  bottom: 0;
+  z-index: 9999;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   & .nav {
     & ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
       & .link-list {
         position: relative;
         width: 40%;
         transition: var(--transition);
         border-radius: 3px;
-        background-color: var(--background);
         border: 1.5px solid transparent;
 
         &:hover {
@@ -19,7 +32,7 @@
           width: 120px;
           height: 53px;
           gap: 7px;
-          align-items: center;
+          justify-items: center;
           padding: 13px;
           overflow: hidden;
 
