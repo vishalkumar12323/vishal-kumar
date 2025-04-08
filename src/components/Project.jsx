@@ -3,12 +3,15 @@ import { IoLogoGithub, IoOpenOutline } from "react-icons/io5";
 
 const Project = () => {
   return (
-    <section className="section project-section h-[90vh] " id="project">
+    <section
+      className="section project-section h-[95vh] md:h-[90vh]"
+      id="project"
+    >
       <div className="section-title">
         <h2 className="text-slate-900">projects</h2>
       </div>
 
-      <div className="project-container w-full h-auto mt-4 p-4">
+      <div className="project-container w-full h-auto mt-4">
         <div
           className="card-container p-[1.5rem] overflow-y-auto gap-2 w-full h-[30rem] grid grid-two-cols"
           id="cardContainer"

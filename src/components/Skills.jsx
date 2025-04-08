@@ -86,7 +86,7 @@ const Skills = () => {
 
   return (
     <section
-      className="section skill-section w-full h-[90vh] md:h-[85vh] mt-[3.5rem]"
+      className="section skill-section w-full h-[90vh] md:h-[85vh] mt-[3.5rem] p-[10px] md:p-0"
       id="skill"
       ref={elementRef}
     >

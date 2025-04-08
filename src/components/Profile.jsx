@@ -27,11 +27,9 @@ const Profile = ({ setOpenSideBar }) => {
       <div className="section-mid w-full h-[85%] flex justify-center items-center">
         <div className="container w-full grid grid-cols-2">
           <div className="left-side flex justify-center flex-col">
-            <p className="heading">
-              <h1 className="text-[2.5rem] md:text[4rem] font-extrabold uppercase text-slate-900">
-                vishal kumar
-              </h1>
-            </p>
+            <h1 className=" text-[2.5rem] md:text[4rem] font-extrabold uppercase text-slate-900">
+              vishal kumar
+            </h1>
 
             <p className="h-description pt-[10px] pl-[11px]">
               <span className="text-[1.1rem]">I'm a </span>

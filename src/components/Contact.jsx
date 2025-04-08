@@ -4,7 +4,7 @@ import { IoMailUnreadOutline } from "react-icons/io5";
 const Contact = () => {
   return (
     <section
-      className="section contact-section mt-16 pb-8 w-full h-screen md:h-[75vh]"
+      className="section contact-section w-full md:h-[75vh]"
       id="contact"
     >
       <div className="section-title">
