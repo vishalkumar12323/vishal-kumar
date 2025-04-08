@@ -133,18 +133,6 @@
     bottom: 1rem;
   }
 
-  .card-overlay .info .name {
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-transform: uppercase;
-  }
-
-  .card-overlay .info .description {
-    font-size: 12px;
-    font-weight: 400;
-    max-width: 100%;
-  }
-
   /* contact-section ----------------- */
   .contact-section {
     margin-top: 3rem;
