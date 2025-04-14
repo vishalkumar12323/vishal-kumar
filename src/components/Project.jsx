@@ -1,5 +1,6 @@
 import projects from "../data/data.json";
 import { IoLogoGithub, IoOpenOutline } from "react-icons/io5";
+import AnimatedSection from "./animated-section";
 
 const Project = () => {
   return (
@@ -7,21 +8,34 @@ const Project = () => {
       className="section project-section h-[95vh] md:h-[90vh]"
       id="project"
     >
-      <div className="section-title">
+      <div className="section-title mb-12">
         <h2 className="text-slate-900">projects</h2>
       </div>
 
-      <div className="project-container w-full h-auto mt-4">
-        <div
-          className="card-container p-[1.5rem] overflow-y-auto gap-2 w-full h-[30rem] grid grid-two-cols"
-          id="cardContainer"
-        >
-          {projects &&
-            projects.map((project) => (
-              <Card key={project.id} project={project} />
-            ))}
+      <AnimatedSection
+        animationVariants={{
+          hidden: { opacity: 0, x: -50, y: 50 },
+          visible: {
+            opacity: 1,
+            x: 0,
+            y: 0,
+            transition: { duration: 2, ease: "easeInOut" },
+          },
+        }}
+        threshold={0.6}
+      >
+        <div className="project-container w-full h-auto mt-4">
+          <div
+            className="card-container p-[1.5rem] overflow-y-auto gap-2 w-full h-[30rem] grid grid-two-cols"
+            id="cardContainer"
+          >
+            {projects &&
+              projects.map((project) => (
+                <Card key={project.id} project={project} />
+              ))}
+          </div>
         </div>
-      </div>
+      </AnimatedSection>
     </section>
   );
 };

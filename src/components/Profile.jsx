@@ -26,7 +26,7 @@ const Profile = ({ setOpenSideBar }) => {
       </div>
 
       <div className="section-mid w-full h-[85%] flex justify-center items-center">
-        <div className="container w-full grid grid-cols-2">
+        <div className="container w-full h-full grid grid-cols-2">
           <div className="left-side flex justify-center flex-col">
             <motion.div
               variants={{
@@ -92,7 +92,7 @@ const Profile = ({ setOpenSideBar }) => {
             </motion.div>
           </div>
 
-          <div className="right-side flex justify-center items-center">
+          <div className="right-side h-[430px] md:h-auto flex justify-center items-center">
             <motion.img
               src="/profile-photo-light.png"
               alt="Profile image"
@@ -100,23 +100,19 @@ const Profile = ({ setOpenSideBar }) => {
                 x: 200,
                 y: 200,
                 scale: 1,
-                width: "0px",
-                height: "0px",
                 opacity: 0,
               }}
               animate={{
                 x: 0,
                 y: 0,
                 scale: 1.5,
-                width: "200px",
-                height: "200px",
                 opacity: [0.2, 0.4, 0.6, 0.8, 1],
               }}
               transition={{
                 duration: 2.5,
                 ease: "easeInOut",
               }}
-              className="absolute object-cover rounded-full"
+              className=" w-[200px] h-[200px] md:w-[225px] md:h-[225px] object-cover rounded-full"
             />
           </div>
         </div>

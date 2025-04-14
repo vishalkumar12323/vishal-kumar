@@ -167,7 +167,6 @@
   .section-mid {
     height: 70%;
     & .container {
-      gap: 2rem;
       & .left-side {
         & .heading span {
           text-align: center;
