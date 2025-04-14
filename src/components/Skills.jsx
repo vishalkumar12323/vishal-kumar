@@ -11,6 +11,8 @@ import {
   BiLogoMongodb,
   BiLogoPostgresql,
 } from "react-icons/bi";
+import { motion } from "framer-motion";
+import AnimatedSection from "./animated-section";
 
 const skills = [
   {
@@ -88,31 +90,42 @@ const Skills = () => {
     <section
       className="section skill-section w-full h-[90vh] md:h-[85vh] mt-[3.5rem] p-[10px] md:p-0"
       id="skill"
-      ref={elementRef}
     >
       <div className="section-title">
         <h2 className="text-slate-900">SKILLS</h2>
       </div>
 
-      <div className="skills mt-10">
-        <div className="w-full h-full flex flex-wrap flex-row md:flex-col gap-5">
-          {visible &&
-            skills.map((skill) => (
-              <div key={skill.id} className="w-full px-2 mb-2">
-                <div className="w-full flex justify-between items-center">
-                  <div className="flex gap-2 items-center">
-                    <span className="uppercase">{skill.skillName}</span>{" "}
-                    {skill.icon}
+      <AnimatedSection
+        animationVariants={{
+          hidden: { opacity: 0, x: -50, y: 50 }, // Start slightly faded out and moved down
+          visible: {
+            opacity: 1,
+            x: 0,
+            y: 0,
+            transition: { duration: 2, ease: "easeInOut" },
+          },
+        }}
+      >
+        <div className="skills mt-10" ref={elementRef}>
+          <div className="w-full h-full flex flex-wrap flex-row md:flex-col gap-5">
+            {visible &&
+              skills.map((skill) => (
+                <div key={skill.id} className="w-full px-2 mb-2">
+                  <div className="w-full flex justify-between items-center">
+                    <div className="flex gap-2 items-center">
+                      <span className="uppercase">{skill.skillName}</span>{" "}
+                      {skill.icon}
+                    </div>
+                    <div>{skill.value}%</div>
                   </div>
-                  <div>{skill.value}%</div>
+                  <div className="w-full bg-slate-200">
+                    <ProgressBar value={skill.value} bg={skill.color} />
+                  </div>
                 </div>
-                <div className="w-full bg-slate-200">
-                  <ProgressBar value={skill.value} bg={skill.color} />
-                </div>
-              </div>
-            ))}
+              ))}
+          </div>
         </div>
-      </div>
+      </AnimatedSection>
     </section>
   );
 };
@@ -121,8 +134,6 @@ export default Skills;
 
 const ProgressBar = ({ value, bg }) => {
   const [progress, setProgress] = useState(0);
-
-  const createProgress = () => {};
 
   useEffect(() => {
     const timer = setInterval(() => {

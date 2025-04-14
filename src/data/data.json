@@ -30,5 +30,13 @@
     "githubLink": "https://github.com/vishalkumar12323/Background-Picker",
     "previewLink": "https://vishalkumar12323.github.io/Background-Picker",
     "description": "Background-picker web app generate PNG images with the dimensions and colour you specify, and it's done with the help of HTML 5 canvas."
+  },
+  {
+    "id": 5,
+    "name": "Dreamdrive",
+    "img": "/dream-drive.png",
+    "githubLink": "https://github.com/vishalkumar12323/DreamDrive",
+    "previewLink": "https://dream-drive.vercel.app/",
+    "description": "A next.js app where users can search cars by name or filter by price, brand, and fuel type. for the data management uses NeonDB with prismaORM."
   }
 ]

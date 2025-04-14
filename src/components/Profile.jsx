@@ -7,10 +7,11 @@ import {
 } from "react-icons/io5";
 import { RiTwitterXFill } from "react-icons/ri";
 import { ReactTyped } from "react-typed";
+import { motion } from "framer-motion";
 
 const Profile = ({ setOpenSideBar }) => {
   return (
-    <section className="hero-section w-full h-screen relative" id="home">
+    <div className="hero-section w-full h-screen relative" id="home">
       <div className="section-top fixed top-0 right-0 w-[7rem] h-[3rem] flex justify-center items-center">
         <div className="menu-bar hidden fixed right-[2%] top-[1.5%] cursor-pointer">
           <IoReorderThreeOutline
@@ -27,40 +28,95 @@ const Profile = ({ setOpenSideBar }) => {
       <div className="section-mid w-full h-[85%] flex justify-center items-center">
         <div className="container w-full grid grid-cols-2">
           <div className="left-side flex justify-center flex-col">
-            <h1 className=" text-[2.5rem] md:text[4rem] font-extrabold uppercase text-slate-900">
-              vishal kumar
-            </h1>
-
-            <p className="h-description pt-[10px] pl-[11px]">
-              <span className="text-[1.1rem]">I'm a </span>
-              <ReactTyped
-                strings={[
-                  "web developer",
-                  "javascript dev.",
-                  "react js dev.",
-                  "node js dev.",
-                  "freelancer",
-                ]}
-                typeSpeed={30}
-                backSpeed={30}
-                loop
-              ></ReactTyped>
-            </p>
-            <a
-              href="https://drive.google.com/file/d/1QpIrnD6zdvDKBssGPWMpsjSaeAl3nMvs/view"
-              target="_blank"
-              className="flex justify-between w-[6.5rem] hover:w-[8.5rem] py-[8px] px-[20px] text-[17px] capitalize border text-white bg-slate-900 rounded transition-all duration-300 items-center"
-              style={{ marginLeft: "11px", marginTop: "10px" }}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, x: -50 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 2 }}
             >
-              <span>Resume</span>
-              <MdOutlineArrowRightAlt size={20} />
-            </a>
+              <h1 className=" text-[2.5rem] md:text[4rem] font-extrabold uppercase text-slate-900">
+                vishal kumar
+              </h1>
+            </motion.div>
+
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, x: -50, y: -25 },
+                visible: { opacity: 1, x: 0, y: 0 },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 2 }}
+            >
+              <p className="h-description pt-[10px] pl-[11px]">
+                <span className="text-[1.1rem]">I'm a </span>
+                <ReactTyped
+                  strings={[
+                    "web developer",
+                    "javascript dev.",
+                    "react js dev.",
+                    "node js dev.",
+                    "freelancer",
+                  ]}
+                  typeSpeed={30}
+                  backSpeed={30}
+                  loop
+                ></ReactTyped>
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, x: -50, y: 25 },
+                visible: { opacity: 1, x: 0, y: 0 },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 2 }}
+            >
+              <a
+                href="https://drive.google.com/file/d/14KYzwghPWF9SmqY5G07eABxmM8Q-TC6b/view"
+                target="_blank"
+                className="flex justify-between w-[6.5rem] hover:w-[8.5rem] py-[8px] px-[20px] text-[17px] capitalize border text-white bg-slate-900 rounded transition-all duration-300 items-center"
+                style={{ marginLeft: "11px", marginTop: "10px" }}
+              >
+                <span>Resume</span>
+                <MdOutlineArrowRightAlt size={20} />
+              </a>
+            </motion.div>
           </div>
+
           <div className="right-side flex justify-center items-center">
-            <img
+            <motion.img
               src="/profile-photo-light.png"
-              alt="vishal kumar"
-              className="w-[300px] h-[300px] rounded-[50%]"
+              alt="Profile image"
+              initial={{
+                x: 200,
+                y: 200,
+                scale: 1,
+                width: "0px",
+                height: "0px",
+                opacity: 0,
+              }}
+              animate={{
+                x: 0,
+                y: 0,
+                scale: 1.5,
+                width: "200px",
+                height: "200px",
+                opacity: [0.2, 0.4, 0.6, 0.8, 1],
+              }}
+              transition={{
+                duration: 2.5,
+                ease: "easeInOut",
+              }}
+              className="absolute object-cover rounded-full"
             />
           </div>
         </div>
@@ -68,33 +124,57 @@ const Profile = ({ setOpenSideBar }) => {
 
       <div className="section-bottom w-full h-[15%]">
         <div className="container w-auto h-full grid gap-4 place-items-center grid-cols-3">
-          <a
+          <motion.a
             href="https://github.com/vishalkumar12323"
             target="_blank"
-            className="social-link-card w-full h-[4.5rem] flex justify-between items-center px-4 border rounded transition-all hover:bg-slate-900 hover:text-white"
+            className="social-link-card w-full h-[4.5rem] flex justify-between items-center px-4 border border-gray-400 rounded transition-all hover:bg-slate-900 hover:text-white"
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 2 }}
           >
             <IoLogoGithub size={25} />
             <IoOpenOutline size={20} />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="https://www.linkedin.com/in/vishal-ninaniya/"
             target="_blank"
-            className="social-link-card w-full h-[4.5rem] flex justify-between items-center px-4 border rounded transition-all hover:bg-slate-900 hover:text-white"
+            className="social-link-card w-full h-[4.5rem] flex justify-between items-center px-4 border border-gray-400 rounded transition-all hover:bg-slate-900 hover:text-white"
+            variants={{
+              hidden: { opacity: 0, y: -50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 2 }}
           >
             <IoLogoLinkedin size={25} />
             <IoOpenOutline size={20} />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="https://x.com/vishalkumar2654"
             target="_blank"
-            className="social-link-card w-full h-[4.5rem] flex justify-between items-center px-4 border rounded transition-all hover:bg-slate-900 hover:text-white"
+            className="social-link-card w-full h-[4.5rem] flex justify-between items-center px-4 border border-gray-400 rounded transition-all hover:bg-slate-900 hover:text-white"
+            variants={{
+              hidden: { opacity: 0, x: 50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 2 }}
           >
             <RiTwitterXFill size={25} />
             <IoOpenOutline size={20} />
-          </a>
+          </motion.a>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
