@@ -6,7 +6,7 @@ import {
   IoMailUnreadOutline,
 } from "react-icons/io5";
 
-const Navbar = ({ openSideBar, setOpenSideBar }) => {
+export const Navbar = ({ openSideBar, setOpenSideBar }) => {
   return (
     <header
       id="header"
@@ -50,5 +50,3 @@ const Navbar = ({ openSideBar, setOpenSideBar }) => {
     </header>
   );
 };
-
-export default Navbar;

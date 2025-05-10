@@ -2,7 +2,7 @@ import { MdOutlineLocationOn, MdOutlinePhoneInTalk } from "react-icons/md";
 import { IoMailUnreadOutline } from "react-icons/io5";
 import AnimatedSection from "./animated-section";
 
-const Contact = () => {
+export const Contact = () => {
   return (
     <section
       className="section contact-section w-full md:h-[75vh] overflow-x-hidden"
@@ -105,5 +105,3 @@ const Contact = () => {
     </section>
   );
 };
-
-export default Contact;

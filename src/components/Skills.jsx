@@ -65,7 +65,7 @@ const skills = [
   },
 ];
 
-const Skills = () => {
+export const Skills = () => {
   const elementRef = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -128,8 +128,6 @@ const Skills = () => {
     </section>
   );
 };
-
-export default Skills;
 
 const ProgressBar = ({ value, bg }) => {
   const [progress, setProgress] = useState(0);

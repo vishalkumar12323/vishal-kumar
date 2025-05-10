@@ -9,9 +9,9 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
 
-const Profile = ({ setOpenSideBar }) => {
+export const Profile = ({ setOpenSideBar }) => {
   return (
-    <div className="hero-section w-full h-screen relative" id="home">
+    <div className="hero-section w-full md:h-screen h-auto relative" id="home">
       <div className="section-top fixed top-0 right-0 w-[7rem] h-[3rem] flex justify-center items-center">
         <div className="menu-bar hidden fixed right-[2%] top-[1.5%] cursor-pointer">
           <IoReorderThreeOutline
@@ -69,7 +69,27 @@ const Profile = ({ setOpenSideBar }) => {
                 ></ReactTyped>
               </p>
             </motion.div>
-
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, x: -25 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 2 }}
+            >
+              <p className="pt-[10px] pl-[11px] text-[14px]">
+                Passionate and results-driven Full-Stack Web Developer with 2.5
+                years of hands-on experience in building responsive front-end
+                interfaces and scalable back-end APIs. Proficient in JavaScript,
+                React.js, Node.js, PostgreSQL, and Docker, with a strong
+                foundation in web architecture, RESTful services, and modern
+                UI/UX principles. Excels in building full-featured web
+                applications and solving complex problems in dynamic
+                environments.
+              </p>
+            </motion.div>
             <motion.div
               variants={{
                 hidden: { opacity: 0, x: -50, y: 25 },
@@ -94,7 +114,7 @@ const Profile = ({ setOpenSideBar }) => {
 
           <div className="right-side h-[430px] md:h-auto flex justify-center items-center">
             <motion.img
-              src="/profile-photo-light.png"
+              src="/profile-photo-lightt.png"
               alt="Profile image"
               initial={{
                 x: 200,
@@ -173,5 +193,3 @@ const Profile = ({ setOpenSideBar }) => {
     </div>
   );
 };
-
-export default Profile;

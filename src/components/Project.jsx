@@ -2,7 +2,7 @@ import projects from "../data/data.json";
 import { IoLogoGithub, IoOpenOutline } from "react-icons/io5";
 import AnimatedSection from "./animated-section";
 
-const Project = () => {
+export const Project = () => {
   return (
     <section
       className="section project-section h-[95vh] md:h-[90vh]"
@@ -39,8 +39,6 @@ const Project = () => {
     </section>
   );
 };
-
-export default Project;
 
 const Card = ({ project }) => {
   return (

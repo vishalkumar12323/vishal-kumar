@@ -1,7 +1,7 @@
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import { RiTwitterXFill } from "react-icons/ri";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className="footer-section h-[25vh] border-t border-slate-300">
       <div className="container flex justify-center items-center flex-col gap-[10px]">
@@ -44,5 +44,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;
