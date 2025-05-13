@@ -36,7 +36,7 @@ export const Footer = () => {
         </div>
         <div className="credits font-semibold ">
           created by{" "}
-          <a href="#" className="text-slate-900">
+          <a href="#" className="text-white underline md:text-slate-900">
             vishal kumar
           </a>
         </div>
