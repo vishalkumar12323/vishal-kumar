@@ -3,9 +3,9 @@ import { RiTwitterXFill } from "react-icons/ri";
 
 export const Footer = () => {
   return (
-    <footer className="footer-section h-[25vh] border-t border-slate-300">
+    <footer className="footer-section h-[25vh] border-t border-slate-300 bg-slate-900 text-white md:bg-white md:text-slate-900">
       <div className="container flex justify-center items-center flex-col gap-[10px]">
-        <h4 className="text-[2rem] md:text-[2.5rem] font-medium mt-4 text-slate-900">
+        <h4 className="text-[2rem] md:text-[2.5rem] font-medium mt-4">
           vishal kumar
         </h4>
         <div className="social-links flex justify-center gap-[10px]">

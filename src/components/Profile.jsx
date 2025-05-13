@@ -101,7 +101,7 @@ export const Profile = ({ setOpenSideBar }) => {
               transition={{ duration: 2 }}
             >
               <a
-                href="https://drive.google.com/file/d/14KYzwghPWF9SmqY5G07eABxmM8Q-TC6b/view"
+                href="/white-blue-paper-resume.pdf"
                 target="_blank"
                 className="flex justify-between w-[6.5rem] hover:w-[8.5rem] py-[8px] px-[20px] text-[17px] capitalize border text-white bg-slate-900 rounded transition-all duration-300 items-center"
                 style={{ marginLeft: "11px", marginTop: "10px" }}

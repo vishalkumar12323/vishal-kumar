@@ -5,7 +5,7 @@ import AnimatedSection from "./animated-section";
 export const Project = () => {
   return (
     <section
-      className="section project-section h-[95vh] md:h-[90vh]"
+      className="section project-section h-auto md:h-[90vh]"
       id="project"
     >
       <div className="section-title mb-12">

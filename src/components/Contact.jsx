@@ -5,7 +5,7 @@ import AnimatedSection from "./animated-section";
 export const Contact = () => {
   return (
     <section
-      className="section contact-section w-full md:h-[75vh] overflow-x-hidden"
+      className="section contact-section w-full h-auto md:h-[75vh] overflow-x-hidden"
       id="contact"
     >
       <div className="section-title">
