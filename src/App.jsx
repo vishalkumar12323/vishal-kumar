@@ -38,7 +38,7 @@ export const App = () => {
             </div>
           }
         >
-          <Profile />
+          <Profile setOpenSideBar={setOpenSideBar} />
           <Skills />
           <Project />
           <Contact />
