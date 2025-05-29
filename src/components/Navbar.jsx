@@ -19,26 +19,26 @@ export const Navbar = ({ openSideBar, setOpenSideBar }) => {
       <div className="div">
         <nav id="navbar" className="nav">
           <ul>
-            <li className="link-list bg-slate-900">
+            <li className="link-list">
               <a href="#home" className="link">
                 <IoHomeOutline className="icons" size={23} />
                 <span className="select">Home</span>
               </a>
             </li>
-            <li className="link-list bg-slate-900">
+            <li className="link-list">
               <a href="#skill" className="link">
                 <IoCodeSlashOutline className="icons" size={23} />
                 <span className="select">Skills</span>
               </a>
             </li>
-            <li className="link-list bg-slate-900">
+            <li className="link-list">
               <a href="#project" className="link">
                 <IoLibraryOutline className="icons" size={23} />
 
                 <span className="select">Projects</span>
               </a>
             </li>
-            <li className="link-list bg-slate-900">
+            <li className="link-list">
               <a href="#contact" className="link">
                 <IoMailUnreadOutline className="icons" size={23} />
                 <span className="select">Contact</span>

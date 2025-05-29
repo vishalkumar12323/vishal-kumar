@@ -20,11 +20,11 @@
         width: 40%;
         transition: var(--transition);
         border-radius: 3px;
-        border: 1.5px solid transparent;
+        border: 1.5px solid black;
 
         &:hover {
           border: 1.5px solid var(--background);
-          background-color: var(--text-color);
+          background-color: transparent;
         }
 
         & .link {
@@ -38,10 +38,6 @@
 
           & span {
             color: transparent;
-          }
-
-          & .icons {
-            color: var(--text-color);
           }
         }
         &:hover .icons {

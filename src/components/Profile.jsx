@@ -38,7 +38,7 @@ export const Profile = ({ setOpenSideBar }) => {
   };
 
   return (
-    <div
+    <section
       className="hero-section w-full md:h-screen h-auto relative"
       id="home"
       ref={ref}
@@ -118,7 +118,7 @@ export const Profile = ({ setOpenSideBar }) => {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 2 }}
               >
-                <p className="pt-[10px] pl-[11px] text-[14px]">
+                <p className="pt-[10px] pl-[11px] text-[14px] text-gray-800">
                   Passionate and results-driven Full-Stack Web Developer with
                   2.5 years of hands-on experience in building responsive
                   front-end interfaces and scalable back-end APIs. Proficient in
@@ -142,7 +142,7 @@ export const Profile = ({ setOpenSideBar }) => {
                 <a
                   href="/white-blue-paper-resume.pdf"
                   target="_blank"
-                  className="flex justify-between w-[6.5rem] hover:w-[8.5rem] py-[8px] px-[20px] text-[17px] capitalize border text-white bg-slate-900 rounded transition-all duration-300 items-center"
+                  className="flex justify-between w-[6.5rem] hover:w-[8.5rem] py-[8px] px-[20px] text-[17px] capitalize border border-black bg-transparent rounded transition-all duration-300 items-center"
                   style={{
                     marginLeft: "11px",
                     marginTop: "10px",
@@ -194,7 +194,7 @@ export const Profile = ({ setOpenSideBar }) => {
           <motion.a
             href="https://github.com/vishalkumar12323"
             target="_blank"
-            className="social-link-card w-full h-[4.5rem] flex justify-between items-center px-4 border border-gray-400 rounded transition-all hover:bg-slate-900 hover:text-white"
+            className="social-link-card w-full h-[4.5rem] flex justify-between items-center px-4 border border-gray-800 rounded transition-all hover:bg-slate-900 hover:text-white"
             variants={{
               hidden: { opacity: 0, x: -50 },
               visible: { opacity: 1, x: 0 },
@@ -210,7 +210,7 @@ export const Profile = ({ setOpenSideBar }) => {
           <motion.a
             href="https://www.linkedin.com/in/vishal-ninaniya/"
             target="_blank"
-            className="social-link-card w-full h-[4.5rem] flex justify-between items-center px-4 border border-gray-400 rounded transition-all hover:bg-slate-900 hover:text-white"
+            className="social-link-card w-full h-[4.5rem] flex justify-between items-center px-4 border border-gray-800 rounded transition-all hover:bg-slate-900 hover:text-white"
             variants={{
               hidden: { opacity: 0, y: -50 },
               visible: { opacity: 1, y: 0 },
@@ -226,7 +226,7 @@ export const Profile = ({ setOpenSideBar }) => {
           <motion.a
             href="https://x.com/vishalkumar2654"
             target="_blank"
-            className="social-link-card w-full h-[4.5rem] flex justify-between items-center px-4 border border-gray-400 rounded transition-all hover:bg-slate-900 hover:text-white"
+            className="social-link-card w-full h-[4.5rem] flex justify-between items-center px-4 border border-gray-800 rounded transition-all hover:bg-slate-900 hover:text-white"
             variants={{
               hidden: { opacity: 0, x: 50 },
               visible: { opacity: 1, x: 0 },
@@ -241,6 +241,6 @@ export const Profile = ({ setOpenSideBar }) => {
           </motion.a>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
