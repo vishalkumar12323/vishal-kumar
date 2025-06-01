@@ -20,7 +20,7 @@ export const Profile = ({ setOpenSideBar }) => {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        duration: 0.5,
+        duration: 0.8,
       },
     },
   };
@@ -31,7 +31,7 @@ export const Profile = ({ setOpenSideBar }) => {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.8,
         ease: "easeOut",
       },
     },

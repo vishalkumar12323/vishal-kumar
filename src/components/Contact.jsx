@@ -14,7 +14,7 @@ export const Contact = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        duration: 0.5,
+        duration: 1,
       },
     },
   };
@@ -25,7 +25,7 @@ export const Contact = () => {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.5,
+        duration: 1,
         ease: "easeOut",
       },
     },
@@ -120,10 +120,7 @@ export const Contact = () => {
             </div>
 
             <div className="form-button">
-              <button
-                type="submit"
-                className="btn bg-slate-900 text-white mt-2"
-              >
+              <button type="submit" className="btn mt-2">
                 send message
               </button>
             </div>

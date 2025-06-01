@@ -55,7 +55,11 @@ export const Project = () => {
         <div className="card-container p-[1.5rem] overflow-y-auto gap-2 w-full h-[30rem] grid grid-two-cols">
           {projects &&
             projects.map((project) => (
-              <motion.div key={project.id} variants={cardVariants}>
+              <motion.div
+                key={project.id}
+                variants={cardVariants}
+                className="h-fit"
+              >
                 <Card project={project} />
               </motion.div>
             ))}
@@ -67,7 +71,7 @@ export const Project = () => {
 
 const Card = ({ project }) => {
   return (
-    <div className="card relative w-full h-fit border shadow">
+    <div className="card relative w-full h-auto border shadow">
       <div className="card-img relative w-full h-full">
         <img
           src={project.img}
